@@ -4,7 +4,8 @@
   "description": "space-x ships info",
   "main": "script.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build --dist-dir ./dist"
   },
   "author": "",
   "license": "ISC",
