@@ -4,7 +4,7 @@ if (module.hot) {
 //selectiing inputs
 const inputEmail = document.getElementById("login-email-input");
 const inputPass = document.getElementById("login-password-input");
-const errMsg = document.querySelector("err-msg");
+const errMsg = document.querySelector(".err-msg");
 //selecting buttons
 const regestBtn = document.getElementById("login__next-button");
 //preventing the forms from reloading the page
@@ -17,6 +17,7 @@ regestBtn.addEventListener("click", function (e) {
   const pass = inputPass.value;
   const userSTR = localStorage.getItem("userInfo");
   const user = JSON.parse(userSTR);
+  if (!user) errMsg.textContent = "please signin";
   if (user.email === email && user.password === pass) {
     window.location.replace("app.html");
   } else {
