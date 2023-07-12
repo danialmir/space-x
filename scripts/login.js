@@ -4,6 +4,7 @@ if (module.hot) {
 //selectiing inputs
 const inputEmail = document.getElementById("login-email-input");
 const inputPass = document.getElementById("login-password-input");
+const errMsg = document.querySelector("err-msg");
 //selecting buttons
 const regestBtn = document.getElementById("login__next-button");
 //preventing the forms from reloading the page
@@ -19,6 +20,11 @@ regestBtn.addEventListener("click", function (e) {
   if (user.email === email && user.password === pass) {
     window.location.replace("app.html");
   } else {
-    console.log(email === user.email);
+    inputEmail.classList.add("input--error");
+    inputPass.classList.add("input--error");
+    errMsg.textContent =
+      user.password !== pass
+        ? "the Password is incorrect"
+        : "the Email is incorrect";
   }
 });
