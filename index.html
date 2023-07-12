@@ -1,0 +1,86 @@
+`<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign in</title>
+    <script
+      src="https://kit.fontawesome.com/b8e829e80d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styling/bacic.css" />
+    <link rel="stylesheet" href="styling/signIn.css" />
+    <script type="module" src="./scripts/signIn.js"></script>
+  </head>
+  <body>
+    <section class="signin-box">
+      <div class="logo--white">
+        <img
+          src="./styling/material/ab4767_b11b3b6dd97f49e985c12813709b1553~mv2.png"
+          alt=""
+        />
+      </div>
+      <h1>sign in</h1>
+      <form action="">
+        <span class="err-msg"></span>
+        <input
+          type="email"
+          name=""
+          id="signin-email-input"
+          class="input--normal"
+          placeholder="Email"
+        />
+        <input
+          type="password"
+          name=""
+          id="signin-password-input"
+          class="input--normal"
+          placeholder="Password"
+        />
+        <button type="submit" id="signin__next-button">
+          next <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+      <p>do you already have an account? <a href="./login.html">log in</a></p>
+    </section>
+    <section class="signin-box--2 hide">
+      <div class="logo--white">
+        <img
+          src=".//styling/material/ab4767_b11b3b6dd97f49e985c12813709b1553~mv2.png"
+          alt=""
+        />
+      </div>
+      <form action="">
+        <span class="err-msg"></span>
+        <div>
+          <input
+            type="text"
+            class="input--small"
+            placeholder="fistname"
+            id="input-firstname"
+          /><input
+            type="text"
+            class="input--small"
+            placeholder="lastname"
+            id="input-lastname"
+          />
+        </div>
+        <input
+          type="text"
+          placeholder="username"
+          class="input--normal"
+          id="input-username"
+        />
+        <input type="date" name="" id="input-birthdate" class="input--normal" />
+        <button type="submit" class="button--big" id="signin__regester-button">
+          regester
+        </button>
+      </form>
+    </section>
+    <section class="sucsses hide">
+      <h1>you signed in sucssesfuly</h1>
+      <a href="login.html">login</a>
+    </section>
+    <a href="app.html"></a>
+  </body>
+</html>

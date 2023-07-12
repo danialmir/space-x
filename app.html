@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b8e829e80d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styling/bacic.css" />
+    <link rel="stylesheet" href="styling/app.css" />
+    <script type="module" src="scripts/app.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="app">
+      <nav class="nav-bar">
+        <div class="logo--white">
+          <img
+            src="styling/material/ab4767_b11b3b6dd97f49e985c12813709b1553~mv2.png"
+            alt=""
+          />
+        </div>
+        <ul class="nav-bar__list">
+          <li class="nav-bar__list__selected">
+            <span class="fa-solid fa-house"></span>home
+          </li>
+          <li><span class="fa-solid fa-magnifying-glass"></span>search</li>
+          <li><span class="fa-solid fa-rocket"></span>ships</li>
+        </ul>
+        <div class="nav-bar__user">
+          <i class="fa-solid fa-user"></i
+          ><span id="navbar-user-name">username</span>
+        </div>
+      </nav>
+      <section class="content">
+        <section class="home hide">
+          <header class="home__header">
+            <h1>wellcome to space-x</h1>
+            <p>
+              here you can search for any spaceship info that is made by space-x
+              compony
+            </p>
+          </header>
+          <main class="home__mian">
+            <article class="home__main__compony">
+              <div class="home__main__compony__about">
+                <h2>what is space-x ?</h2>
+                <p>
+                  The Space Exploration Technologies Corporation (SpaceX) is an
+                  American spacecraft manufacturer, launcher, and satellite
+                  communications company headquartered in Hawthorne, California.
+                  The company was founded in 2002 by Elon Musk with the goal of
+                  reducing space transportation costs and to colonize Mars. The
+                  company manufactures the Falcon 9, Falcon Heavy and Starship
+                  heavy-lift launch vehicles, the Cargo Dragon and Crew Dragon
+                  spacecrafts, the Starlink mega-constellation satellite and
+                  rocket engines.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/SpaceX" target="_blank"
+                  >learn more <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="home__main__compony__founders">
+              <h2>founders</h2>
+              <div class="founder-card">
+                <img
+                  src="./styling/material/USAFA_Hosts_Elon_Musk_(Image_1_of_17)_(cropped).jpg"
+                  alt=""
+                />
+                <h3>Elon Musk</h3>
+                <p>
+                  Elon Musk , born June 28, 1971 in Pretoria, South Africa, is a
+                  South African-Canadian-American entrepreneur, entrepreneur and
+                  billionaire
+                </p>
+                <a
+                  href="https://fr.wikipedia.org/wiki/Elon_Musk"
+                  target="_blank"
+                  >more on here</a
+                >
+              </div>
+            </article>
+          </main>
+        </section>
+        <section class="ships">
+          <div class="ships__card"></div>
+        </section>
+      </section>
+    </section>
+  </body>
+</html>

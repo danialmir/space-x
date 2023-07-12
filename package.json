@@ -1,0 +1,14 @@
+{
+  "name": "space-x",
+  "version": "1.0.0",
+  "description": "space-x ships info",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}

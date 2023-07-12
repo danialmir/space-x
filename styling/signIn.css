@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+
+:root {
+  --primery-color: #222831;
+  --secondery-color: #393e46;
+  --third-color: #00adb5;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.signin-box {
+  width: 45rem;
+  height: 50rem;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  gap: 3rem;
+  background-color: var(--primery-color);
+  animation: appear 1s ease;
+}
+.logo--white {
+  width: 25rem;
+  height: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 10;
+  background-color: #fff;
+}
+.logo--white img {
+  width: 25rem;
+}
+.signin-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: -6rem;
+}
+
+#signin__next-button i {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
+.signin-box p {
+  margin-top: 7rem;
+  font-size: 1rem;
+}
+
+.signin-box h1 {
+  margin-top: -20;
+  margin-bottom: 6rem;
+}
+.signin-box--2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--primery-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40rem;
+  height: 100%;
+  padding-left: 2rem;
+  padding-top: 12rem;
+  padding-right: 6rem;
+  animation: sidein 1s ease-out;
+}
+#input-lastname {
+  margin-left: 3rem;
+}
+
+.signin-box--2 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.sucsses {
+  width: 50rem;
+  height: 25rem;
+  background-color: var(--primery-color);
+  border-radius: 1rem;
+  text-align: center;
+}
+.sucsses a {
+  margin-top: 2rem;
+  font-size: 4rem;
+}
+.hide {
+  display: none;
+}
+@keyframes sidein {
+  0% {
+    left: -100rem;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background: var(--primery-color);
+  }
+
+  .signin-box--2 {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+}

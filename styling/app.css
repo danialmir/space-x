@@ -1,0 +1,142 @@
+:root {
+  --primery-color: #222831;
+  --secondery-color: #393e46;
+  --third-color: #00adb5;
+  --text-color: #eeeeee;
+  --error-color: #ff0000;
+}
+body {
+  background: url(./material/pexels-spacex-23769.jpg);
+  background-repeat: 0 0;
+  background-position: 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app {
+  background-color: rgba(0, 0, 0, 0.616);
+  width: 90%;
+  height: 90%;
+  border: var(--text-color) 0.2rem solid;
+  overflow: hidden;
+  display: flex;
+  border-radius: 2rem;
+}
+/*nav bar*/
+.nav-bar {
+  background-color: var(--primery-color);
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.nav-bar .logo--white,
+.nav-bar .logo--white img {
+  width: 17rem;
+}
+.nav-bar .logo--white {
+  height: 3rem;
+}
+.nav-bar__list {
+  list-style: none;
+}
+.nav-bar__list li {
+  color: var(--text-color);
+  font-size: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.nav-bar__list li span {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+.nav-bar .nav-bar__list__selected,
+.nav-bar__list__selected span {
+  background: var(--third-color);
+  color: var(--primery-color);
+}
+.nav-bar__user span {
+  font-size: 2rem;
+}
+.nav-bar__user i {
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+/*contant*/
+.content {
+  width: 75%;
+  margin-left: 10%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/*home*/
+.home {
+  width: 100%;
+  padding: 3rem;
+}
+.home__header {
+  text-align: center;
+}
+.home__header p {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+/*main*/
+.home__mian {
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home__main__compony {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
+.home__main__compony__about {
+  width: 80rem;
+  height: 30rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: var(--secondery-color);
+  text-align: center;
+}
+.home__main__compony__about h2 {
+  margin-bottom: 2rem;
+}
+.home__main__compony__about a i {
+  font-size: 1.5rem;
+  color: var(--third-color);
+}
+.home__main__compony__founders {
+  width: 75%;
+  padding: 2rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.founder-card {
+  height: 20rem;
+  position: relative;
+  background: linear-gradient(
+    105deg,
+    var(--secondery-color),
+    var(--third-color) 125%
+  );
+  margin-top: 7rem;
+  padding-top: 6rem;
+  border-radius: 2rem;
+}
+.founder-card img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  right: calc(50% - 5rem);
+  top: -5rem;
+}

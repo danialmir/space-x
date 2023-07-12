@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+
+:root {
+  --primery-color: #222831;
+  --secondery-color: #393e46;
+  --third-color: #00adb5;
+  --text-color: #eeeeee;
+  --error-color: #ff0000;
+}
+* {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 10px;
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  line-height: 2.5rem;
+  letter-spacing: 0.1rem;
+}
+body {
+  background: url("./material/ng-colab-space_night.gif");
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  overflow: hidden;
+}
+h1 {
+  font-size: 3.6rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+p {
+  font-size: 1.2rem;
+}
+a {
+  font-size: 1.2rem;
+  color: var(--third-color);
+  text-decoration: none;
+}
+button {
+  width: 12rem;
+  height: 5rem;
+  border-radius: 1rem;
+  border: 0;
+  background-color: var(--secondery-color);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+input {
+  border: 0;
+  background-color: #393e466f;
+  color: var(--text-color);
+  padding-left: 1rem;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+input::placeholder {
+  font-size: 1.5rem;
+}
+input:focus {
+  outline: 0;
+  border: var(--third-color) 0.5rem solid;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  margin-right: 2rem;
+  background-color: var(--text-color);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.input--normal {
+  width: 40rem;
+  height: 5rem;
+}
+.input--small {
+  width: 18rem;
+  height: 5rem;
+}
+.button--big {
+  width: 40rem;
+  height: 5rem;
+}
+.input--error {
+  border: var(--error-color) 0.5rem solid;
+}
+.input--error::placeholder {
+  color: var(--error-color);
+}
+.err-msg {
+  color: var(--error-color);
+  display: block;
+  font-size: 1.2rem;
+}
+.logo--white {
+  width: 25rem;
+  height: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 10;
+  background-color: #fff;
+}
+.logo--white img {
+  width: 25rem;
+}
+.hide {
+  display: none !important;
+}
+@media only screen and (max-width: 600px) {
+  input {
+    font-size: 1rem;
+  }
+  .input--normal {
+    width: 25rem;
+  }
+  .input--small {
+    width: 12rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .button--big {
+    width: 20rem;
+  }
+}
