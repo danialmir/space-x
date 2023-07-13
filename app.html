@@ -22,11 +22,15 @@
           />
         </div>
         <ul class="nav-bar__list">
-          <li class="nav-bar__list__selected">
+          <li data-section="home" class="nav-bar__list__selected">
             <span class="fa-solid fa-house"></span>home
           </li>
-          <li><span class="fa-solid fa-magnifying-glass"></span>search</li>
-          <li><span class="fa-solid fa-rocket"></span>ships</li>
+          <li data-section="search">
+            <span class="fa-solid fa-magnifying-glass"></span>search
+          </li>
+          <li data-section="ships">
+            <span class="fa-solid fa-rocket"></span>ships
+          </li>
         </ul>
         <div class="nav-bar__user">
           <i class="fa-solid fa-user"></i
@@ -34,7 +38,7 @@
         </div>
       </nav>
       <section class="content">
-        <section class="home hide">
+        <section class="home">
           <header class="home__header">
             <h1>wellcome to space-x</h1>
             <p>
@@ -84,10 +88,46 @@
             </article>
           </main>
         </section>
-        <section class="ships">
-          <div class="ships__card"></div>
+        <section class="ships hide">
+          <div class="ships__card">
+            <img src="https://i.imgur.com/woCxpkj.jpg" alt="" />
+            <div class="ship__card__info">
+              <h3>name</h3>
+              <p>active</p>
+              <p>home port</p>
+              <p>year build</p>
+            </div>
+          </div>
+          <div class="ships__card">
+            <img src="https://i.imgur.com/woCxpkj.jpg" alt="" />
+            <div class="ship__card__info">
+              <h3>name</h3>
+              <p>active</p>
+              <p>home port</p>
+              <p>year build</p>
+            </div>
+          </div>
+          <div class="ships__card">
+            <img src="https://i.imgur.com/woCxpkj.jpg" alt="" />
+            <div class="ship__card__info">
+              <h3>name</h3>
+              <p>active</p>
+              <p>home port</p>
+              <p>year build</p>
+            </div>
+          </div>
+          <div class="ships__card">
+            <img src="https://i.imgur.com/woCxpkj.jpg" alt="" />
+            <div class="ship__card__info">
+              <h3>name</h3>
+              <p>active</p>
+              <p>home port</p>
+              <p>year build</p>
+            </div>
+          </div>
         </section>
       </section>
+      <div id="embedded-explorer" />
     </section>
   </body>
 </html>

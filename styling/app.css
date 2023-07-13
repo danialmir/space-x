@@ -25,7 +25,8 @@ body {
 /*nav bar*/
 .nav-bar {
   background-color: var(--primery-color);
-  width: 15%;
+  min-width: 15%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,8 +67,8 @@ body {
 }
 /*contant*/
 .content {
-  width: 75%;
-  margin-left: 10%;
+  min-width: 75%;
+  flex-grow: 10;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -88,6 +89,7 @@ body {
   width: 100%;
   margin-top: 4rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
 }
@@ -139,4 +141,42 @@ body {
   position: absolute;
   right: calc(50% - 5rem);
   top: -5rem;
+}
+/*ship card*/
+.ships {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(15rem, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.ships__card {
+  width: 100%;
+  height: 20rem;
+  border-radius: 2rem;
+  border: var(--third-color) 0.2rem solid;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-self: center;
+}
+.ships__card img {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 0%;
+  object-fit: cover;
+  z-index: -7;
+  transition: all 0.3s;
+}
+.ships__card:hover img {
+  z-index: 10;
+  height: 100%;
+}
+
+.ship__card__info {
+  height: 50%;
+  background-color: var(--secondery-color);
+  padding-left: 2rem;
+  z-index: 2;
 }
