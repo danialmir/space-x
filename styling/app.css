@@ -44,17 +44,20 @@ body {
   list-style: none;
 }
 .nav-bar__list li {
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.nv-bar__list li span {
   color: var(--text-color);
   font-size: 2rem;
-  padding: 2rem;
-  border-radius: 1rem;
 }
-.nav-bar__list li span {
+.nav-bar__list li i {
   font-size: 2rem;
   margin-right: 1.5rem;
 }
 .nav-bar .nav-bar__list__selected,
-.nav-bar__list__selected span {
+.nav-bar__list__selected span,
+.nav-bar__list__selected i {
   background: var(--third-color);
   color: var(--primery-color);
 }
@@ -197,4 +200,38 @@ body {
 .ships__card:hover .favorite-btn {
   top: 1rem;
   z-index: 20;
+}
+@media screen and (max-width: 720px) {
+  .app {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0%;
+    flex-direction: column-reverse;
+  }
+  .nav-bar {
+    flex-direction: row;
+  }
+  .nav-bar .logo--white {
+    display: none;
+  }
+  .nav-bar__list {
+    display: flex;
+  }
+  .nav-bar__list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+  }
+  .nav-bar__list li span {
+    display: none;
+  }
+  #navbar-user-name {
+    display: none;
+  }
+  .ships {
+    grid-template-columns: 1fr;
+  }
 }
