@@ -1,12 +1,10 @@
-if (module.hot) module.hot.accept();
-import User from "./user";
+// if (module.hot) module.hot.accept();
+import Ship from "./user";
 //selecting elements
 const navBarLinks = document.querySelectorAll(".nav-bar__list li");
 const sections = document.querySelectorAll(".content section");
-//ship class
-class Ship {
-  constructor(object) {}
-}
+const shipsSection = document.querySelector(".ships");
+const favoritsSection = document.querySelector(".favorits");
 ////////////////////////////////////////////////////////////////
 navBarLinks.forEach((link) =>
   link.addEventListener("click", function () {
@@ -65,5 +63,20 @@ query Query {
   return res.json();
 };
 fetchContent().then((res) => {
-  new User(res.data.ships[0]).printAllToConsole();
+  res.data.ships.forEach((el) => {
+    const ship = new Ship(el, res.data.ships);
+    ship.createCard(shipsSection);
+    ship.attachFavoriteListeners();
+  });
+  updateFavorite(res.data.ships);
 });
+
+const updateFavorite = function (arrayOfShips) {
+  const allFavorites = JSON.parse(localStorage.getItem("favorites"));
+  allFavorites.forEach((id1) => {
+    const matchShip = new Ship(arrayOfShips.find((ship) => ship.id === id1));
+    console.log(matchShip);
+    matchShip.createCard(favoritsSection);
+  });
+};
+export { updateFavorite };

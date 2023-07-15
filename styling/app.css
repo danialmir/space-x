@@ -159,6 +159,7 @@ body {
   display: flex;
   flex-direction: column-reverse;
   justify-self: center;
+  cursor: pointer;
 }
 .ships__card img {
   position: absolute;
@@ -179,4 +180,21 @@ body {
   background-color: var(--secondery-color);
   padding-left: 2rem;
   z-index: 2;
+}
+.favorite-btn {
+  position: absolute;
+  top: -2rem;
+  right: 1rem;
+  background-color: var(--third-color);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+.ships__card:hover .favorite-btn {
+  top: 1rem;
+  z-index: 20;
 }
