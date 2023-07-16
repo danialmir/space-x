@@ -1,7 +1,7 @@
 import { updateFavorite } from "./app";
 class User {
   favorites =
-    JSON.parse(localStorage.getItem("favorites"))?.filter(
+    JSON.parse(localStorage?.getItem("favorites"))?.filter(
       (el) => typeof el === "string"
     ) || [];
   constructor(object, shipsArray) {
