@@ -104,7 +104,6 @@ function openModal(object) {
   }
   console.log(object);
   modalName.innerHTML = object.name;
-  modalId.innerHTML = object.id;
   modalImg.src = object.image || "not specified";
   modalActive.innerHTML = active() || "not specified";
   modalWeight.innerHTML = object.weight_kg || "not specified";
