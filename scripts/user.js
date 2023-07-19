@@ -1,10 +1,11 @@
-import { updateFavorite } from "./app";
+import { updateFavorite, openModal } from "./app";
 class User {
   favorites =
     JSON.parse(localStorage?.getItem("favorites"))?.filter(
       (el) => typeof el === "string"
     ) || [];
   constructor(object, shipsArray) {
+    this.obj = object;
     this.shipActivity = object.active;
     this.shipName = object.name;
     this.shipHomeport = object.home_port;
@@ -21,9 +22,9 @@ class User {
   }
   createCard(place) {
     const tick = '<i class="fa-solid fa-check"></i>';
-    const times = '<i class="fa-solid fa-xmark"></i>';
+    const times = '<i class="fa-solid fa-check"></i>';
     const html = `
-      <div class="ships__card">
+      <div class="ships__card" data-obj=${this.allShips.indexOf(this.obj)}>
         <div class="favorite-btn" data-id="${this.id}">${
       this.favoriteOrNot
     }</div>
@@ -40,6 +41,11 @@ class User {
   }
   attachFavoriteListeners() {
     const favoriteButtons = document.querySelectorAll(".favorite-btn");
+    const allShipCards = document.querySelectorAll(".ships__card");
+    allShipCards.forEach((card) => {
+      const shipsArray = this.allShips[card.dataset.obj];
+      card.addEventListener("click", () => openModal(shipsArray));
+    });
     favoriteButtons.forEach((button) => {
       const id = button.dataset.id;
       button.addEventListener("click", () => this.favorite(id));

@@ -25,9 +25,6 @@
           <li data-section="home" class="nav-bar__list__selected">
             <i class="fa-solid fa-house"></i><span>home</span>
           </li>
-          <li data-section="search">
-            <i class="fa-solid fa-magnifying-glass"></i><span>search</span>
-          </li>
           <li data-section="ships">
             <i class="fa-solid fa-rocket"></i><span>ships</span>
           </li><li data-section="favorits">
@@ -95,7 +92,23 @@
         <section class="favorits ships hide"></section>
       </section>
       </section>
-      <div id="embedded-explorer" />
+    </section>
+    <section class="modal hide">
+      <div class="overlay"></div>
+      <div class="modal__content">
+        <div class="modal__close"><i class="fa-solid fa-xmark"></i></div>
+        <img id="modal__img" src="./styling/material/USAFA_Hosts_Elon_Musk_(Image_1_of_17)_(cropped).jpg" alt="modal__ship-img">
+        <div class="modal__ship-ditels">
+        <div class="modal__title">
+          <h1>name</h1>
+          <p>id</p>
+          </div>
+          <p id="modal__active">active</p>
+          <p id="modal__weight">weight</p>
+          <p id="modal__speed">speed</p>
+          <p id="modal__model">model</p>
+          <p id="modal__class">class</p>
+          <p id="modal__year-built">year bulid</p>
     </section>
   </body>
 </html>

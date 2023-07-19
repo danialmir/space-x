@@ -63,20 +63,56 @@ query Query {
   return res.json();
 };
 fetchContent().then((res) => {
-  res.data.ships.forEach((el) => {
-    const ship = new Ship(el, res.data.ships);
+  const data = res.data.ships;
+  data.forEach((el) => {
+    const ship = new Ship(el, data);
     ship.createCard(shipsSection);
     ship.attachFavoriteListeners();
   });
-  updateFavorite(res.data.ships);
+  updateFavorite(data);
 });
 
 const updateFavorite = function (arrayOfShips) {
+  favoritsSection.innerHTML = "";
   const allFavorites = JSON.parse(localStorage.getItem("favorites"));
   allFavorites.forEach((id1) => {
     const matchShip = new Ship(arrayOfShips.find((ship) => ship.id === id1));
     console.log(matchShip);
     matchShip.createCard(favoritsSection);
+    matchShip.attachFavoriteListeners();
   });
 };
 export { updateFavorite };
+
+const modal = document.querySelector(".modal");
+const modalCloseBtn = document.querySelector(".modal__close");
+const modalOverlay = document.querySelector(".overlay");
+function openModal(object) {
+  const modalImg = document.getElementById("modal__img");
+  const modalActive = document.getElementById("modal__active");
+  const modalWeight = document.getElementById("modal__weight");
+  const modalSpeed = document.getElementById("modal__speed");
+  const modalModel = document.getElementById("modal__model");
+  const modalClass = document.getElementById("modal__class");
+  const modalYearbuilt = document.getElementById("modal__year-built");
+  function active() {
+    return object.active
+      ? `active : <i class="fa-solid fa-check"></i>`
+      : 'active : <i class="fa-solid fa-check"></i>';
+  }
+  console.log(object);
+  modalImg.src = object.image || "not specified";
+  modalActive.innerHTML = active() || "not specified";
+  modalWeight.innerHTML = object.weight_kg || "not specified";
+  modalSpeed.innerHTML = object.speed_kn || "not specified";
+  modalModel.innerHTML = object.model || "not specified";
+  modalClass.innerHTML = object.class || "not specified";
+  modalYearbuilt.innerHTML = object.year_built || "not specified";
+  modal.classList.remove("hide");
+}
+function closeModal() {
+  modal.classList.add("hide");
+}
+modalCloseBtn.addEventListener("click", closeModal);
+modalOverlay.addEventListener("click", closeModal);
+export { openModal };
