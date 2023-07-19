@@ -88,6 +88,8 @@ const modal = document.querySelector(".modal");
 const modalCloseBtn = document.querySelector(".modal__close");
 const modalOverlay = document.querySelector(".overlay");
 function openModal(object) {
+  const modalName = document.querySelector(".modal__title h1");
+  const modalId = document.querySelector(".modal__title q");
   const modalImg = document.getElementById("modal__img");
   const modalActive = document.getElementById("modal__active");
   const modalWeight = document.getElementById("modal__weight");
@@ -101,6 +103,8 @@ function openModal(object) {
       : 'active : <i class="fa-solid fa-check"></i>';
   }
   console.log(object);
+  modalName.innerHTML = object.name;
+  modalId.innerHTML = object.id;
   modalImg.src = object.image || "not specified";
   modalActive.innerHTML = active() || "not specified";
   modalWeight.innerHTML = object.weight_kg || "not specified";

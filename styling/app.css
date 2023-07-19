@@ -243,11 +243,11 @@ body {
   position: absolute;
   top: -10rem;
   text-align: center;
+  color: #393e46;
 }
 .modal__title p {
   text-transform: uppercase;
   margin-top: 1rem;
-  color: #393e46;
 }
 .modal__close {
   position: absolute;
